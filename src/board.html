@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body> 
+    <div id="modalContainer" class="modal-win-container">
+        <div class="modal-win" id="modalWin">
+           
+            <div class="modal-win-section">
+                <img class="modal-win-logo" src="pictures/Logo-Pokememorice.png" alt="">
+                <img class="modal-win-gif"src="pictures/charizard-flying.gif" alt="">
+                <div class="modal-win-body">
+                    <h1 class="modal-win-h1">¡Felicitaciones!</h1>
+                    <h2 id='modaWinH2' class="modal-win-h2"> Lograste reunir los pokemones </h2>
+                </div>
+                <a href="board.html" id="restart" class="restart">reiniciar</a> 
+            </div>
+        </div>
+    </div>
+    <div id="modalMatch" class="modal-match-container">
+        <div class="modal-match" id="modalMatch">
+            <div class="modal-title">¡Nos encontraste!</div>
+            <div class=modal-match-body></div>
+        </div>
+    </div>
+
+    <div id="gameContainer"></div>
+    
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
