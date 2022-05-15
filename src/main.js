@@ -54,3 +54,4 @@ if (window.location.pathname!="/SCL020-memory-match/"){
     document.getElementById('gameContainer').appendChild(bigDiv);
 }
 
+"/SCL020-memory-match/"
