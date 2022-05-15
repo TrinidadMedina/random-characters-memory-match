@@ -1,4 +1,3 @@
-import pokemon from '../data/pokemon/pokemon.js';
 import utilities from '../utilities.js';
  
 let matchCount=0;
@@ -85,8 +84,6 @@ const App = {
       divCard.style.height= "620px";
       divCard.style.margin= "2%";
     }
-
-    ;
     player.appendChild(divCount);
     player.appendChild(divProgress);
     divBar.appendChild(bar);
@@ -121,7 +118,6 @@ const App = {
     if (turn<2){
       turn++;
       this.style.transform = 'rotateY(180deg)';
-      console.log(selectedCardsMiniDiv);
       selectedCardsMiniDiv.push(this);
       if (turn===2 && selectedCardsMiniDiv[0].id==selectedCardsMiniDiv[1].id){
         selectedCardsMiniDiv.pop();
@@ -153,7 +149,7 @@ const App = {
   },
  
   match:()=>{
-    setTimeout(function(){
+ 
       matchCount++;
       selectedCardsMiniDiv[0].style.visibility ="hidden";
       selectedCardsMiniDiv[1].style.visibility ="hidden";
@@ -165,9 +161,7 @@ const App = {
         setTimeout(function(){
           utilities.modalWin(counting);
         },3000);
-      }
-    },1)
-    return  
+      } 
   },
  
   noMatch:()=>{

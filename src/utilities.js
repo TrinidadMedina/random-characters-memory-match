@@ -11,7 +11,7 @@ export default {
     
     modalMatch:(selectedCardsMiniDiv)=>{
       let audioMatch = new Audio(selectedCardsMiniDiv[0].audio);
-      audioMatch.volume = 0.9;
+      audioMatch.volume = 0.8;
       audioMatch.play(); 
       let modalContainer = document.getElementById("modalMatch");
       modalContainer.childNodes[1].style.visibility="visible";
@@ -52,5 +52,8 @@ export default {
   
     actualCount:(counting)=>{
       document.getElementById('divCount').textContent='Intentos: '+counting;//
-    }
+    },
+      
+    
+    
   }
