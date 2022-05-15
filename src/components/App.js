@@ -23,6 +23,10 @@ function list(){
     }
     let item = { id: i, image: 'https://www.serebii.net/pokemongo/pokemon/'+random+'.png', audio: 'audios/pika.mp3'};
     pokemones.push(item);
+  if(pokemones.length>1&&pokemones[i].image===pokemones[i-1].image){
+      pokemones.pop();
+      cantidad = cantidad+1;
+    }
   }
   return pokemones;
 };
@@ -71,6 +75,18 @@ const App = {
     divCount.textContent='Intentos: '+counting;
     divProgress.textContent='Progreso: ';
     parCaptures.textContent='Capturas: ';
+    if (cantidad==15){
+      divCard.style.gridTemplateColumns= "repeat(6, 1fr)";
+      divCard.style.width= "800 px";
+      divCard.style.height= "500px";
+    }else if(cantidad==24){
+      divCard.style.gridTemplateColumns= "repeat(8, 1fr)";
+      divCard.style.width= "800px";
+      divCard.style.height= "620px";
+      divCard.style.margin= "2%";
+    }
+
+    ;
     player.appendChild(divCount);
     player.appendChild(divProgress);
     divBar.appendChild(bar);

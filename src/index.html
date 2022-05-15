@@ -9,12 +9,19 @@
 <body>
   <div id="container" class="container-index">
     <div id="speaking" class="bubble bubble-bottom-left">
-      <p> ¡Hola! <input class="name-input" type="text" id="text" placeholder="escribe tu nombre aquí"></p>
+      <p> ¡Hola! <input class="name-input" type="text" id="text" placeholder="escribe tu nombre"></p>
       <p id="p"></p>
       <div id="start" class="start">
-        <input type="number" id="number">
-        <input type="button" id="button">
-        <a href="board.html" id="restart" class="restart">¡VaMoS!</a>
+        <p>Elige la cantidad de pokemones:
+          <select name="select" id="number">
+            <option value="" disabled selected>Selecciona cantidad...</option>
+            <option value="16" >16</option>
+            <option value="30">30</option>
+            <option value="48">48</option>
+          </select>
+        </p>
+          <a href="board.html" id="vamos" class="restart">¡VaMoS!</a>
+  
       </div>
     </div>
     <img class="logo-memorice-index" src="pictures/Logo-Pokememorice.png" alt="Logo Pokememorice">
