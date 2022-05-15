@@ -76,12 +76,9 @@ const App = {
     parCaptures.textContent='Capturas: ';
     if (cantidad==15){
       divCard.style.gridTemplateColumns= "repeat(6, 1fr)";
-      divCard.style.width= "800px";
-      divCard.style.height= "500px";
+  
     }else if(cantidad==24){
       divCard.style.gridTemplateColumns= "repeat(6, 1fr)";
-      divCard.style.width= "800px";
-      divCard.style.height= "800px";
 
     }
     player.appendChild(divCount);

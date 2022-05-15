@@ -342,34 +342,35 @@ body {
     /* ======= RESPONSIVE BOARD ======= */
     .big-div {
         flex-direction: column-reverse;
-    }
-    .player {
-        width: 60%;
-        padding: 1% 5% 0% 5%;
+      }
+      .player {
         line-height: 1.5;
+        width: 60%;
         align-self: center;
-    }
-    .div-card {
+        padding: 1% 5% 0% 5%;
+      }
+      .div-card {
         width: 90%;
         height: 50vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         gap: 5px;
-    }
-     /* ======= RESPONSIVE MODAL ======= */
-    .modal-win {
+      }
+      .modal-win {
         align-items: center;
-    }
-    .modal-win-section {
-        margin: 10px;
-    }
-    .modal-win-logo {
-        position: relative;
+      }
+      .modal-win-logo {
         width: 100%;
+        position: relative;
         align-self: center;
-    }
-    .modal-win-body {
-        background-color: rgba(255, 255, 255, 0.4);
-    }
-    .restart {
+      }
+      .modal-win-section {
+        margin: 10px;
+      }
+      .restart {
         margin-top: 10px;
+      }
+      .modal-win-body {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
     }
-}
