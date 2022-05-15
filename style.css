@@ -1,58 +1,22 @@
 @font-face {
     font-family: PokemonSolid;
     src: url("fonts/Pokemon\ Solid.ttf");
-  }
-  @font-face {
-    font-family: PokemonByW;
-    src: url("fonts/pokemon_black_and_white_version.ttf");
-  }
-  @font-face {
+}
+@font-face {
     font-family: PokemonDS;
     src: url("fonts/pokemon-ds-font.ttf");
-  }
-  @font-face {
+}
+@font-face {
     font-family: PocketMonk;
     src: url("fonts/PocketMonk-15ze.ttf");
-  }
-  
-  body {
+}
+body {
     margin: 0;
     cursor: url(pictures/golden-pokeball-closed-cursor.png), auto;
-  }
-  
+    font-family: PokemonDS;
+} 
   /* ======== INDEX ========= */
-  .logo-memorice-index {
-    max-width: 70%;
-    position: absolute;
-    left: 10%;
-    bottom: 10%;
-  }
-  .start {
-    visibility: hidden;
-    margin-bottom: 4%;
-  }
-
-  a {
-    font-weight: lighter;
-    font-size: large;
-    padding: 2% 4%;
-    background-color: rgb(161, 125, 5);
-    box-shadow: 3px 3px 10px rgba(133, 132, 134, 0.9);
-    color: white;
-
-    text-decoration: none;
-    font-family: PokemonSolid;
-    letter-spacing: 0.3em;
-  }
-  #vamos:hover {
-    text-shadow: 5px 5px rgb(97, 75, 2);
-    text-shadow: 5px 5px rgb(97, 75, 2);
-    text-transform: uppercase;
-  }
-  #vamos{
-    visibility: hidden;
-  }
-  .container-index {
+.container-index {
     height: 100vh;
     min-height: 100vh;
     max-height: 100vh;
@@ -62,31 +26,21 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-  }
-  .img-ash {
-    max-width: 50%;
-    max-height: 95vh;
-    align-self: flex-end;
-  }
-  .name-input {
-    padding: 2%;
-  }
-  .bubble {
-    position: relative;
-    margin: 5% 0% 30% 5%;
-    /* box-shadow: 2px 5px 18px #363535; */
-    font-family: PokemonDS;
-    font-size:x-large;
-    align-self: flex-start;
+}
+.bubble {
     width: 30%;
+    padding: 1%;
+    margin: 5% 0% 30% 5%;
     background: #fff;
     border-radius: 60px;
-    padding: 1%;
+    position: relative;
+    align-self: flex-start;
+    font-size:x-large;
     text-align: center;
     color: #000;
     line-height: 110%;
-  }
-  .bubble-bottom-left:before {
+}
+.bubble-bottom-left:before {
     content: "";
     width: 0px;
     height: 0px;
@@ -97,86 +51,113 @@
     border-bottom: 20px solid transparent;
     left: 190px;
     bottom: -24px;
-  }
-  
-  /*============ BOARD =========*/
-  
-  #gameContainer {
+}
+.name-input {
+    padding: 2%;
+}
+.start {
+    visibility: hidden;
+    margin-bottom: 4%;
+}
+.restart {
+    padding: 2% 4%;
+    text-decoration: none;
+    background-color: rgb(161, 125, 5);
+    box-shadow: 3px 3px 10px rgba(133, 132, 134, 0.9);
+    font-family: PokemonSolid;
+    color: white;
+    font-weight: lighter;
+    font-size: large;
+    letter-spacing: 0.3em;
+}
+#vamos:hover {
+    text-shadow: 5px 5px rgb(97, 75, 2);
+    text-transform: uppercase;
+}
+#vamos{
+    visibility: hidden;
+}
+.logo-memorice-index {
+    max-width: 70%;
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+}
+.img-ash {
+    max-width: 50%;
+    max-height: 95vh;
+    align-self: flex-end;
+}  
+
+/*============ BOARD =========*/  
+#gameContainer {
+    min-height: 100vh;
     height: 100vh;
     width: 100%;
+}
+.big-div {
     min-height: 100vh;
-  }
-  .big-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row-reverse;
-    min-height: 100vh;
-    background-image: url(pictures/Fondo\ Cielo\ Pokemon.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100vw;
     margin: 0;
     padding: 0;
-  }
-  .player {
     display: flex;
-    flex-direction: column;
-    line-height: 2;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    background-image: url(pictures/Fondo\ Cielo\ Pokemon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.player {
+    position: relative;
     width: 15%;
     height: 30%;
-    align-self: start;
-    justify-self: end;
     padding: 1%;
     margin-top: 5%;
     margin-left: 1%;
     margin-right: 5%;
     background-color: rgb(242, 242, 242, 0.7);
-
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    justify-self: end;
     overflow: auto;
+    line-height: 2;
     letter-spacing: 0.2em;
-    font-family: PokemonDS;
+}
+#myProgress {
     position: relative;
-  }
-  .logo-player {
-    width: 90%;
-  }
-  #myProgress {
-    position: relative;
-
     width: 100%;
     height: 30px;
+    margin: 0%;
     box-shadow: 0.5px 2px 10px #d5d4d4;
     background-color: rgb(242, 242, 242);
-    margin: 0%;
-  }
-  #myBar {
+}
+#myBar {
     position: absolute;
     width: 0%;
     height: 100%;
-
     background-color: rgb(67, 143, 67);
-  }
-  .divPokebolas {
+}
+.divPokebolas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-  }
-  .div-card {
-    margin: 5%;
-    padding: 0%;
+} 
+.div-card {
     perspective: 100%;
     width: 600px;
     height: 620px;
+    margin: 5%;
+    padding: 0%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     cursor: url(pictures/golden-pokeball-open-cursor-.png), auto; /*CURSOR ABIERTO DORADO*/
-  }
-  
-  .mini-div {
+}  
+.mini-div {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
     transition: transform 0.5s;
     -webkit-transition: transform 0.5s;
     -moz-transform-style: transform 0.5s;
@@ -187,40 +168,36 @@
     -moz-transform-style: preserve-3d;  /*Firefox*/
     -ms-transform-style: preserve-3d;  /*Explorer*/
     -o-transform-style: preserve-3d;  /*Opera*/
-  }
-  
-  .mini-div:hover {
+} 
+.mini-div:hover {
     -ms-transform: scale(1.08); /* IE 9 */
     -webkit-transform: scale(1.08); /* Safari 3-8 */
     transform: scale(1.08);
-  }
-  .card-image-front,
-  .card-image-back {
-
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden; /*Firefox*/
-      -ms-backface-visibility: hidden; /*Explorer*/
-      -moz-backface-visibility: hidden; /*Opera*/
+}
+.card-image-front,
+.card-image-back {
+    position: absolute;
     width: 100%;
     max-width: 100%;
     max-height: 100%;
     padding-bottom: 0%;
-    position: absolute;
     box-shadow: 2px 2px 8px #888888;
-  }
-  .card-image-front {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden; /*Firefox*/
+    -ms-backface-visibility: hidden; /*Explorer*/
+    -moz-backface-visibility: hidden; /*Opera*/  
+}
+.card-image-front {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg); /*Firefox*/
     -ms-transform: rotateY(180deg); /*Explorer*/
     -o-transform: rotateY(180deg); /*Opera*/
-  }
-  
-  
+}  
   /* ========================== MODAL  ========================== */
   /* ============ WIN MODAL ========== */
-  .modal-win-container {
+.modal-win-container {
     position: fixed;
     visibility: hidden;
     z-index: 11;
@@ -230,63 +207,60 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .modal-win {
-
-    visibility: hidden;
+}
+.modal-win {
     position: relative;
-    border-radius: 4%;
+    visibility: hidden;
     width: 80%;
     height: 80%;
-    display: flex;
-    justify-content: flex-end;
+    border-radius: 4%;
     background-image: url(pictures/modal-win.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 10%;
     background-position-y: 10%;
-  }
-  .modal-win-gif {
-    width: 40%;
-    position: relative;
-    margin-left: 16%;
-    margin-bottom: 8%;
-  }
-  .modal-win-section {
-    font-family: PokemonDS;
+    display: flex;
+    justify-content: flex-end;   
+}
+.modal-win-section {
+    margin-right: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    margin-right: 10%;
-  }
-  .modal-win-body {
-    background-color: rgba(255, 255, 255, 0.399);
-    border-radius: 5%;
-    padding: 3%;
-    text-align: center;
-  }
-  .modal-win-h1 {
-    color: rgb(255, 255, 255);
-    font-family: PocketMonk;
-    letter-spacing: 0.1em;
-    text-shadow: 2px 2px #444444;
-  }
-  .modal-win-h2 {
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px #444444;
-  }
-  .modal-win-logo {
+    align-items: center;  
+}
+.modal-win-logo {
+    position: fixed;
     width: 40%;
     margin-top: 7%;
     margin-bottom: 5%;
     margin-right: 5%;
-    position: fixed;
-  }
+}
+.modal-win-gif {
+    position: relative;
+    width: 40%;
+    margin-left: 16%;
+    margin-bottom: 8%;
+}
+.modal-win-body {
+    padding: 3%;
+    background-color: rgba(255, 255, 255, 0.399);
+    border-radius: 5%;
+    text-align: center;
+}
+.modal-win-h1 {
+    font-family: PocketMonk;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px #444444;
+}
+.modal-win-h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px #444444;
+}
   
-  /* ============ MATCH MODAL ========== */
-  
-  .modal-match-container {
+  /* ============ MATCH MODAL ========== */ 
+.modal-match-container {
     position: fixed;
     visibility: hidden;
     z-index: 11;
@@ -296,116 +270,106 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .modal-match {
+}  
+.modal-match {
+    position: relative;
+    visibility: hidden;
+    max-width: 80%;
     padding: 5% 5%;
     margin: 5% 5%;
     border-radius: 50%;
-    visibility: hidden;
-    position: relative;
-    display: flex;
-    max-width: 80%;
     background-color: rgba(255, 255, 255, 0.399);
+    display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .modal-title {
-    color: white;
+}
+.modal-title {
     padding: 0%;
     padding-top: 2%;
+    font-family: PocketMonk;
+    font-size: xx-large;
+    color: white;
     display: flex;
     justify-content: space-around;
-    font-size: xx-large;
-    font-family: PocketMonk;
     align-self: center;
-  }
-  
-  .modal-message {
+}
+.match-img {
     align-self: center;
-  }
-  .match-img {
-    align-self: center;
-  }
+}
   
   /* ======= RESPONSIVE INDEX =========== */
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
     .container-index {
-      flex-direction: column;
-      padding-bottom: 0;
-      margin-bottom: 0;
-      justify-content: space-between;
-      align-items: center;
-      overflow: scroll;
-      background-position: 0%;
-    }
-    .img-ash {
-      align-self: flex-end;
-      width: 50%;
-      min-width: 50vh;
-      min-height: 50vh;
-    }
-    .restart {
-      display: flex;
-      justify-content: center;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        background-position: 0%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        overflow: scroll;
     }
     .bubble {
-      margin-top: 18%;
-      margin-bottom: 0%;
-      padding-bottom: 5%;
-      width: 70%;
+        width: 70%;
+        margin-top: 18%;
+        margin-bottom: 0%;
+        padding-bottom: 5%;
     }
     .bubble-bottom-left:before {
-      left: 100px;
-      bottom: -24px;
+        left: 100px;
     }
-    .logo-memorice-index {
-      max-width: 80%;
-      top: 3%;
+    .name-input {
+        width: 50%;
+    }
+    .restart {
+        display: flex;
+        justify-content: center;
     }
     p {
-      margin: 5%;
-      font-size: smaller;
-      line-height: 100%;
+        margin: 5%;
+        font-size: smaller;
+        line-height: 100%;
     }
-    #text {
-      width: 50%;
+    .logo-memorice-index {
+        max-width: 80%;
+        top: 3%;
+    }
+    .img-ash {
+        width: 50%;
+        min-width: 50vh;
+        min-height: 50vh;
     }
   
     /* ======= RESPONSIVE BOARD ======= */
-  
     .big-div {
-      flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
     .player {
-      line-height: 1.5;
-      width: 60%;
-      align-self: center;
-      padding: 1% 5% 0% 5%;
+        width: 60%;
+        padding: 1% 5% 0% 5%;
+        line-height: 1.5;
+        align-self: center;
     }
     .div-card {
-      width: 90%;
-      height: 50vh;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 5px;
+        width: 90%;
+        height: 50vh;
+        gap: 5px;
     }
+     /* ======= RESPONSIVE MODAL ======= */
     .modal-win {
-      align-items: center;
-    }
-    .modal-win-logo {
-      width: 100%;
-      position: relative;
-      align-self: center;
+        align-items: center;
     }
     .modal-win-section {
-      margin: 10px;
+        margin: 10px;
     }
-    .restart {
-      margin-top: 10px;
+    .modal-win-logo {
+        position: relative;
+        width: 100%;
+        align-self: center;
     }
     .modal-win-body {
-      background-color: rgba(255, 255, 255, 0.4);
+        background-color: rgba(255, 255, 255, 0.4);
     }
-  }
-  
+    .restart {
+        margin-top: 10px;
+    }
+}
