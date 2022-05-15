@@ -1,4 +1,3 @@
-import pokemon from '../data/pokemon/pokemon.js';
 import utilities from '../utilities.js';
  
 let matchCount=0;
@@ -34,7 +33,6 @@ function list(){
 const App = {
   createCardList : () => {
     let cardList = list();
-  utilities.mainSound();
     return cardList;
   },
   duplicateList : (cardList) => {

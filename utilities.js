@@ -53,12 +53,7 @@ export default {
     actualCount:(counting)=>{
       document.getElementById('divCount').textContent='Intentos: '+counting;//
     },
-
-    mainSound :()=>{    
-        let audio = new Audio('audios/main-theme.mp3');
-        audio.play();
-        audio.volume = 0.2;
-        audio.loop=true; 
-        return audio;
-    }
+      
+    
+    
   }
