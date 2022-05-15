@@ -5,6 +5,7 @@ let counting=0;
 let turn=0;
 let selectedCardsMiniDiv=[];
 let pokemones =[];
+let randomNums =[];
 let cantidad=localStorage.getItem('numberCards');
  
 function getRandomInt(min, max) {
@@ -15,6 +16,15 @@ function getRandomInt(min, max) {
 function list(){
   for(let i=0;i<cantidad;i++){
     let random=getRandomInt(1,890);
+    randomNums.push(random);
+    /*    ----funcion para que no se repitan los pokemones ------
+    for (let j in randomNums){
+      if(randomNums [j] == random){ obvio que el primero si va a salir que es igual
+        console.log(random+" ya existe");
+        cantidad = cantidad+1;
+        getRandomInt(1,890); la llamo de nuevo para buscar otro numero?
+        break;
+    } */
     if (random<100 && random>9){
       random="0"+random;
     } else if (random <10){
@@ -22,10 +32,7 @@ function list(){
     }
     let item = { id: i, image: 'https://www.serebii.net/pokemongo/pokemon/'+random+'.png', audio: 'audios/pika.mp3'};
     pokemones.push(item);
-  if(pokemones.length>1&&pokemones[i].image===pokemones[i-1].image){
-      pokemones.pop();
-      cantidad = cantidad+1;
-    }
+
   }
   return pokemones;
 };
