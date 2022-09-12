@@ -2,7 +2,7 @@ import App from './components/App.js';
 let namePlayer = "";
 let numberCards="";
 
-if (window.location.pathname=="/memory-match-random-characters.vercel.app/"){
+if (window.location.pathname=="/"){
     document.getElementById("text").addEventListener('change',function(){
         namePlayer = document.getElementById("text").value;
         const saveToLocalStorage = () => {
@@ -42,7 +42,7 @@ if (window.location.pathname=="/memory-match-random-characters.vercel.app/"){
     })
 }
 
-if (window.location.pathname!="/memory-match-random-characters.vercel.app/"){   
+if (window.location.pathname!="/"){   
     let audio = new Audio('audios/main-theme.mp3');
     audio.play();
     audio.volume = 0.2;
