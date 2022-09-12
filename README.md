@@ -3,7 +3,7 @@
 PokeMemorice es un juego creado para niñes entre 7 y 10 años, pero si tienes presente a tu niñ@ interior también puedes jugar ;). El juego sigue las reglas de un clásico memorice pero debes encontrar pares de pokemones y podrás saber en cuántas oportunidades lo lograste.
 Además podrás conocer pokemones entre más de 800 existentes y elegir la cantidad de cartas para aumentar la dificultad.
 
-Pruébalo! https://macaparedes.github.io/SCL020-memory-match/
+Pruébalo! https://random-characters-memory-match.vercel.app/
 
 ## Historias de usuario
 
